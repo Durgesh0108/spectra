@@ -1,0 +1,120 @@
+extends base
+include reviewCard
+
+//- block append head
+//-     script(src="https://js.stripe.com/v3/")
+
+block content 
+    section.bg-white.py-10
+        .container.max-w-screen-xl.mx-auto.px-4
+            .grid.grid-cols-1.gap-8(class='sm:grid-cols-2')
+            aside
+                //- // gallery
+                .border.border-gray-200.shadow-sm.p-3.text-center.rounded.mb-5
+                    img.object-cover.inline-block(width='400' id='product-images' src=`/img/glasses/${glass.imageCover}` alt=`${glass.name}`)
+                .space-x-2.overflow-auto.text-center.whitespace-nowrap.thumbnail
+                    - allImages = [glass.imageCover,glass.imageHover,...glass.images]
+                    each x in allImages
+                        a.inline-block.border.border-gray-200.p-1.rounded-md(href='#' class='hover:border-blue-500')
+                            img.w-56.h-40(src=`/img/glasses/${x}` alt='Product title') 
+
+                    //- a.inline-block.border.border-gray-200.p-1.rounded-md(href='#' class='hover:border-blue-500')
+                    //-     img.w-14.h-14(src=`/img/glasses/${glass.imageCover}` alt='Product title')
+                    //- a.inline-block.border.border-gray-200.p-1.rounded-md(href='#' class='hover:border-blue-500')
+                    //-     img.w-14.h-14(src=`/img/glasses/${glass.imageHover}` alt='Product title')
+                    //- a.inline-block.border.border-gray-200.p-1.rounded-md(href='#' class='hover:border-blue-500')
+                    //-     img.w-14.h-14(src=`/img/glasses/${glass.images[0]}` alt='Product title')
+                    //- a.inline-block.border.border-gray-200.p-1.rounded-md(href='#' class='hover:border-blue-500')
+                    //-     img.w-14.h-14(src=`/img/glasses/${glass.images[1]}` alt='Product title')
+                    //- a.inline-block.border.border-gray-200.p-1.rounded-md(href='#' class='hover:border-blue-500')
+                    //-     img.w-14.h-14(src=`/img/glasses/${glass.images[2]}` alt='Product title')
+                //- // gallery end.//
+            main
+                h2.font-semibold.text-2xl.mb-4
+                | #{glass.name}
+                .flex.flex-wrap.items-center.space-x-2.mb-2
+                    //- img.d-inline-block.h-4(src='images/misc/stars-active.svg' alt='Rating')
+                    span.text-yellow-500 Rating: #{glass.ratingsAverage}
+                    //- svg(width='6px' height='6px' viewbox='0 0 6 6' xmlns='http://www.w3.org/2000/svg')
+                    //-     circle(cx='3' cy='3' r='3' fill='#DBDBDB')
+                    //- span.text-gray-400
+                    //-     i.fa.fa-shopping-bag.mr-2
+                    //-     |  154 orders
+                    //- svg(width='6px' height='6px' viewbox='0 0 6 6' xmlns='http://www.w3.org/2000/svg')
+                    //-     circle(cx='3' cy='3' r='3' fill='#DBDBDB')
+                    //- span.text-green-500 Verified
+                p.mb-4.font-semibold.text-xl= `$${glass.price} / `
+                    span.text-base.font-normal 1 box
+                p.mb-4.text-gray-500 #{glass.description}               
+                //- ul.mb-5
+                //-     li.mb-1
+                //-         b.font-medium.w-36.inline-block Model#:
+                //-         span.text-gray-500 Odsy-1000
+                //-     li.mb-1
+                //-         b.font-medium.w-36.inline-block Color:
+                //-         span.text-gray-500 Brown
+                //-     li.mb-1
+                //-         b.font-medium.w-36.inline-block Delivery:
+                //-         span.text-gray-500 Russia, USA &amp; Europe
+                //-     li.mb-1
+                //-         b.font-medium.w-36.inline-block Color:
+                //-         span.text-gray-500 Brown
+                //- .flex.flex-wrap.mb-4
+                //-     // select-custom
+                //-     .relative.mr-2.mb-4(class='w-1/3 lg:w-1/4')
+                //-         select.block.appearance-none.border.border-gray-200.bg-gray-100.rounded-md.py-2.px-3.pr-5.w-full(class='hover:border-gray-400 focus:outline-none focus:border-gray-400')
+                //-             option Select size
+                //-             option Extra large
+                //-             option Medium size
+                //-             option Normal size
+                //-         i.pointer-events-none.absolute.inset-y-0.right-0.flex.items-center.px-2.text-gray-500
+                //-             svg.fill-current.h-5.w-5(width='24' height='24' viewbox='0 0 24 24')
+                //-                 path(d='M7 10l5 5 5-5H7z')
+                //-     // select-custom .//end
+                //-     // select-custom
+                //-     .relative.mr-2.mb-4(class='w-1/3 lg:w-1/4')
+                //-         select.block.appearance-none.border.border-gray-200.bg-gray-100.rounded-md.py-2.px-3.pr-5.w-full(class='hover:border-gray-400 focus:outline-none focus:border-gray-400')
+                //-             option Select color
+                //-             option Lightblue
+                //-             option Green
+                //-             option Black
+                //-         i.pointer-events-none.absolute.inset-y-0.right-0.flex.items-center.px-2.text-gray-500
+                //-             svg.fill-current.h-5.w-5(width='24' height='24' viewbox='0 0 24 24')
+                //-                 path(d='M7 10l5 5 5-5H7z')
+                // select-custom .//end
+                // action buttons
+                .flex.flex-wrap.gap-2
+                    button#book-glass.px-4.py-2.inline-block.text-white.bg-yellow-500.border.border-transparent.rounded-md(class='hover:bg-yellow-600', data-glass-ID=`${glass._id}`)
+                        i.fa.fa-bag.mr-2
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; Buy now
+                    a.px-4.py-2.inline-block.text-white.bg-blue-600.border.border-transparent.rounded-md(class='hover:bg-blue-700' href='#')
+                        i.fa.fa-shopping-cart.mr-2
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; Add to cart
+                    a.px-4.py-2.inline-block.text-blue-600.border.border-gray-300.rounded-md(class='hover:bg-gray-100' href='#')
+                        i.fa.fa-heart.mr-2
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9; Save for later
+                // action buttons .//end
+                // grid .//
+                // container .//
+                //- .bg-white.rounded-lg.shadow-md.p-4
+                //-     .flex.items-center.mb-4
+                //-         img.w-12.h-12.rounded-full.mr-4(src='user-photo.jpg' alt='User photo')
+                //-         div
+                //-             h3.text-lg.font-medium John Doe
+                //-             .flex.items-center
+                //-                 svg.w-4.h-4.text-yellow-500.mr-1(fill='currentColor' viewbox='0 0 20 20')
+                //-                     path(d='M10 0c-2.09 0-4.02.84-5.42 2.21l1.32 1.43A6.963 6.963 0 0110 2c1.67 0 3.19.6 4.38 1.58l1.32-1.43A7.97 7.97 0 0010 0zM5.28 4.72L3.85 3.29A8.026 8.026 0 000 10c0 2.18.86 4.19 2.27 5.66l1.43-1.32A5.967 5.967 0 011 10a5.967 5.967 0 011.7-4.23l1.58 1.58zm9.44 0l-1.58-1.58A5.967 5.967 0 0119 10a5.967 5.967 0 01-1.7 4.23l-1.58-1.58A3.96 3.96 0 0018 10c0-1.09-.43-2.09-1.14-2.83zM10 14a3.967 3.967 0 003.55-2.21l1.58 1.58A5.967 5.967 0 0119 10a5.967 5.967 0 01-1.7 4.23l-1.58-1.58A3.967 3.967 0 0010 14z')
+                //-                 span.text-gray-600.text-sm 4.5
+                //-     p.text-gray-700.mb-4
+                //-         | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.
+                //-     a.text-blue-500.font-medium(href='#' class='hover:text-blue-600') Read more
+                //- if(review)
+                .flex.flex-wrap.gap-2.mt-8
+                    a.px-4.py-2.inline-block.text-white.bg-green-500.border.border-transparent.rounded-md(class='hover:bg-green-700' href=`/glass/${glass.slug}/addReview` data-glass-ID=`${glass.id}`)  Add Review
+
+
+            section.section-reviews.my-3
+                .reviews.p-2
+                    each review in glass.reviews
+                        +reviewCard(review)
+

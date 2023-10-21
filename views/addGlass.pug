@@ -1,0 +1,55 @@
+extends base
+
+block content 
+
+    section.bg-gray-100.py-10(style='min-height: 86vh')
+        .container.max-w-screen-xl.mx-auto.px-4
+            // COMPONENT: SIGN IN
+            .mt-10.mb-20.p-4.mx-auto.rounded.bg-white.shadow-lg(style='max-width:480px' class='md:p-7')
+                form#form--addGlass
+                    h2.mb-5.text-2xl.font-semibold Add Glass
+                    //- .grid.gap-x-2(class='md:grid-cols-1')
+                    .mb-4
+                        label.block.mb-1  Name 
+                        input.appearance-none.border.border-gray-200.bg-gray-100.rounded-md.py-2.px-3.w-full(class='hover:border-gray-400 focus:outline-none focus:border-gray-400' id="name" type='text' placeholder='Enter Glass Name')
+                    // grid
+                    .mb-4
+                        label.block.mb-1  Price 
+                        input.appearance-none.border.border-gray-200.bg-gray-100.rounded-md.py-2.px-3.w-full(class='hover:border-gray-400 focus:outline-none focus:border-gray-400' id="price" type='number' step="0.1" placeholder='Enter Price')
+                    .mb-4
+                        label.block.mb-1  Summary 
+                        input.appearance-none.border.border-gray-200.bg-gray-100.rounded-md.py-2.px-3.w-full(class='hover:border-gray-400 focus:outline-none focus:border-gray-400' id="summary" type='textarea' placeholder='Enter Summary')
+                    .mb-4
+                        label.block.mb-1  Description
+                        input.appearance-none.border.border-gray-200.bg-gray-100.rounded-md.py-2.px-3.w-full(class='hover:border-gray-400 focus:outline-none focus:border-gray-400' id="description" type='textarea' placeholder='Enter Description')
+                    .mb-4
+                        label.block.mb-1  Rating Average
+                        input.appearance-none.border.border-gray-200.bg-gray-100.rounded-md.py-2.px-3.w-full(class='hover:border-gray-400 focus:outline-none focus:border-gray-400' id="ratingsAverage" type='number' placeholder='Enter Description')
+                    .mb-4
+                        label.block.mb-1  Cover Image 
+                        input.appearance-none.border.border-gray-200.bg-gray-100.rounded-md.py-2.px-3.w-full(class='hover:border-gray-400 focus:outline-none focus:border-gray-400' id="imageCover" type='file', accept='image/*' placeholder='Insert Your Photo')
+                    .mb-4
+                        label.block.mb-1  Hover Image 
+                        input.appearance-none.border.border-gray-200.bg-gray-100.rounded-md.py-2.px-3.w-full(class='hover:border-gray-400 focus:outline-none focus:border-gray-400' id="imageHover" type='file', accept='image/*' placeholder='Insert Your Photo')
+                    .mb-4
+                        label.block.mb-1  Images
+                        input.appearance-none.border.border-gray-200.bg-gray-100.rounded-md.py-2.px-3.w-full(class='hover:border-gray-400 focus:outline-none focus:border-gray-400' id="images"  type='file', accept='image/*' placeholder='Insert Your Photo')
+                    //- .mb-4
+                    //-     label.block.mb-1  Image 1
+                    //-     input.images.appearance-none.border.border-gray-200.bg-gray-100.rounded-md.py-2.px-3.w-full(class='hover:border-gray-400 focus:outline-none focus:border-gray-400' id="images1"  type='file', accept='image/*' placeholder='Insert Your Photo')
+                    //- .mb-4
+                    //-     label.block.mb-1  Image 2
+                    //-     input.images.appearance-none.border.border-gray-200.bg-gray-100.rounded-md.py-2.px-3.w-full(class='hover:border-gray-400 focus:outline-none focus:border-gray-400' id="images2" type='file', accept='image/*' placeholder='Insert Your Photo')
+                    //- .mb-4
+                    //-     label.block.mb-1  Image 3
+                    //-     input.images.appearance-none.border.border-gray-200.bg-gray-100.rounded-md.py-2.px-3.w-full(class='hover:border-gray-400 focus:outline-none focus:border-gray-400' id="images3" type='file', accept='image/*' placeholder='Insert Your Photo')
+                    button.my-2.px-4.py-2.text-center.w-full.inline-block.text-white.bg-blue-600.border.border-transparent.rounded-md(class='hover:bg-blue-700')
+                        | Add Glass
+                    label.flex.items-center.w-max.my-4
+                        input.h-4.w-4(checked='' name='' type='checkbox')
+                        span.ml-2.inline-block  I agree with Terms and Conditions 
+                    //- hr
+                    //- p.text-center.mt-5
+                    //-     | Already have an account? 
+                    //-     a.text-blue-500(href='/login') Sign in
+        // COMPONENT: SIGN IN //END

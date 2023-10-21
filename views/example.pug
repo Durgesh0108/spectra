@@ -1,0 +1,61 @@
+//- doctype html
+//- html(lang="en")
+//-     head
+//-         meta(charset="UTF-8")
+//-         meta(http-equiv="X-UA-Compatible", content="IE=edge")
+//-         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+//-         title Spectra
+//-         //- The way to link your css File
+//-         link(rel="stylesheet", href="css/style.css")
+//-         link(rel="shortcut icon", href="favicon.ico", type="image/x-icon")
+//-     body 
+//-         h1 This is Spectra Website
+//-         p  This is a Paragraph 
+//-         //- Example of Setting up or using js or variable in the code or template 
+//-         //- 
+//-         h4 The #{glass} Belongs to #{user}
+//-         h4= glass
+//-         - const x = 9
+//-         h2= 2*x
+
+//-         h2 The Value of 2*x is #{2*x}
+//-         h2= user.toUpperCase()
+        
+
+doctype html
+html
+    head
+        title Change Image on Click
+        script(src='/jquery.js')
+        style
+            //- img 
+            //-     max-width: 30rem
+            //-     height: auto
+            .image-container
+                display: flex
+                justify-content: center
+                align-items: center
+                height: 500px
+            .thumbnail-container 
+                display: flex
+                justify-content: center
+                align-items: center
+                margin-top: 20px
+            .thumbnail 
+                margin-right: 10px
+                cursor: pointer
+    body
+        .image-container
+            img(src='https://picsum.photos/id/237/800/500' alt='Product Image' id='product-image')
+        .thumbnail-container
+            each val, index in ['https://picsum.photos/id/237/800/500', 'https://picsum.photos/id/238/800/500', 'https://picsum.photos/id/239/800/500']
+                img.thumbnail(src=val alt='Thumbnail Image', data-index=index)
+                
+
+        script.
+            $(document).ready(function() {
+                $('.thumbnail').click(function() {
+                    var index = $(this).data('index');
+                    $('#product-image').attr('src', $('.thumbnail[data-index="' + index + '"]').attr('src'));
+                });
+            });

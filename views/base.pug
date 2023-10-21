@@ -1,0 +1,46 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset='UTF-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        //- meta(http-equiv="Content-Security-Policy" content="default-src 'self' http://127.0.0.1:5000;")
+        title Spectra | #{title}
+        //- link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous")
+        //- Here all the files are refering the Public Folder for css, javascript and Images
+        //- link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" integrity="sha512-G8PvD0Vt55fPmnwvjF91qib1vDp1X/Ynmz0b+Vd/QlRvGv7p8A3q3JtVx+OJfKmV8HQJ/dZZEx7X9EKtDmLhWQ==" crossorigin="anonymous" referrerpolicy="no-referrer" )
+        link(href="/css/tailwind.min.css" rel="stylesheet")
+        link(rel='stylesheet', href='/css/style.css')
+        //- type accepts the type of file we want to accept eg" png. ico
+        link(rel='shortcut icon', href='/img/favicon.jpg', type='image/jpg') 
+        //- link(rel="shortcut icon", href="favicon.ico", type="image/svg")
+        //- link(rel="preconnect" href="https://fonts.googleapis.com")
+        //- link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin) 
+        //- link(href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet")
+
+        link(rel='preconnect' href='https://fonts.googleapis.com')
+        link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+        link(href='https://fonts.googleapis.com/css2?family=Labrada&family=Merriweather:ital@0;1&display=swap' rel='stylesheet')
+        //- link(href='https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css', rel='stylesheet')
+
+    body 
+        // Header
+        include _header
+        
+        // Content
+        block content 
+            .container
+
+        // Footer
+        include _footer
+
+        //- script(type="module" script-src="https://unpkg.com/axios/dist/axios.min.js")
+        //- script(type="module" script-src="https://unpkg.com/axios/dist/axios.min.js")
+        //- script(type="module" script-src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js")
+        //- script(type="module" script-src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js" integrity="sha512-LUKzDoJKOLqnxGWWIBM4lzRBlxcva2ZTztO8bTcWPmDSpkErWx0bSP4pdsjNH8kiHAUPaT06UXcb+vOEZH+HpQ==" crossorigin="anonymous" referrerpolicy="no-referrer")
+        //- script(type="module" script-src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha512-3BBFWr73Xrf8GRjO+0pl0cbVwESBvg3ovnuCXpoqOkC/mkt/hTkFtutUPrwRz8eLySYvy5v1daulkyUZYvH8jw==" crossorigin="anonymous" referrerpolicy="no-referrer")
+        //- script(src="/js/login.js") 
+        script(script-src="https://js.stripe.com/v3/")
+        script(src='/js/bundle.js')
+        
+        

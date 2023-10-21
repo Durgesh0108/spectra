@@ -1,0 +1,45 @@
+extends base
+
+block content 
+    main.px-8.py-8.m-10
+        .grid.grid-cols-3.gap-10.gap-x-15(class='sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3')
+            each glass in glasses
+                div
+                    // COMPONENT: PRODUCT CARD
+                    article.shadow-sm.rounded.bg-white.border.border-gray-200
+                        a.block.relative.p-1(href=`/glass/${glass.slug}`)
+                            img.mx-auto.w-auto.object-coverl(src=`/img/glasses/${glass.imageCover}` height='240' alt=`${glass.name}`)
+                            //- img.mx-auto.w-auto.object-coverl(src=`/img/glasses/${glass.imageCover}` height='240' alt=`${glass.name}` onmouseover= `this.src=/img/glasses/${glass.imageHover}`, onmouseout=`this.src= /img/glasses/${glass.imageCover}`)
+                        .p-4.border-t.border-t-gray-200
+                            p.font-semibold $#{glass.price} 
+                            a.block.text-gray-600.mb-3(href=`/glass/${glass.slug}` class='hover:text-blue-500')
+                                | #{glass.name}
+                            p.font-semibold #{glass.summary}
+                            .block.text-gray-600.mb-3 
+                                span #{glass.ratingsAverage} Rating (#{glass.ratingsQuantity})
+                                //- if user
+                                //-     a.px-4.py-2.inline-block.text-white.bg-green-500.border.border-transparent.rounded-md(class='hover:bg-green-700' href='/buy') Buy Now
+                                //- else
+                                //-     a.px-4.py-2.inline-block.text-white.bg-green-500.border.border-transparent.rounded-md(class='hover:bg-green-700' href='/login') Login
+                            //- div
+                            //-     a.px-4.py-2.inline-block.text-white.text-center.bg-blue-600.border.border-transparent.rounded-md(class='hover:bg-blue-700' href='#')
+                            //-     | Add to cart
+                            //- a.px-3.py-2.inline-block.text-blue-600.border.border-gray-300.rounded-md(class='hover:bg-gray-100' href='#')
+                            //-     i.fa.fa-heart
+                // COMPONENT: PRODUCT CARD //END
+
+//-     .container 
+//-         div.slider
+//-             img(src='image1.jpg')
+//-             img(src='image2.jpg')
+//-             img(src='image3.jpg')
+
+//- script.
+//-     $(document).ready(function(){
+//-         $('.slider').slick({
+//-             dots: true,
+//-             autoplay: true,
+//-             autoplaySpeed: 3000,
+//-             arrows: false
+//-         });
+//-     });

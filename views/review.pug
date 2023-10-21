@@ -1,0 +1,18 @@
+extends base
+
+block content 
+
+    section.bg-gray-100.py-10(style='min-height: 86vh')
+        .container.max-w-screen-xl.mx-auto.px-4
+            // COMPONENT: SIGN IN
+            .mt-10.mb-20.p-4.mx-auto.rounded.bg-white.shadow-lg(style='max-width:360px' class='md:p-7')
+                form#form--addReview
+                    h2.mb-5.text-2xl.font-semibold Add Review
+                    .mb-4
+                        label.block.mb-1(for='rating')  Rating 
+                        input#rating.appearance-none.border.border-gray-200.bg-gray-100.rounded-md.py-2.px-3.w-full(class='hover:border-gray-400 focus:outline-none focus:border-gray-400' type='number' placeholder='Type here')
+                    .mb-4
+                        label.block.mb-1(for='review')  Review 
+                        input#review.appearance-none.border.border-gray-200.bg-gray-100.rounded-md.py-2.px-3.w-full(class='hover:border-gray-400 focus:outline-none focus:border-gray-400' type='text' placeholder='Type here')
+                    button.px-4.py-2.text-center.w-full.inline-block.text-white.bg-blue-600.border.border-transparent.rounded-md(class='hover:bg-blue-700')  Submit 
+

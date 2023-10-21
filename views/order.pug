@@ -1,0 +1,161 @@
+extends base
+
+block content 
+
+    section.py-10.bg-gray-50
+        .container.max-w-screen-xl.mx-auto.px-4
+            .flex.flex-col.gap-4(class='md:flex-row lg:gap-8')
+                main(class='md:w-2/3')
+                    //
+                        <article class="border border-gray-200 bg-white shadow-sm rounded p-4 lg:p-6 mb-5">
+                        <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center">
+                        <div class="mb-4 lg:mb-0">
+                        <h3 class="text-xl font-semibold">Have an account?</h3>
+                        <p class="text-gray-600">By creating account you will get more benefits</p>
+                        </div>
+                        <div class="">
+                        <a class="px-4 py-2 inline-block text-blue-600 bg-white shadow-sm border border-gray-200 rounded-md hover:bg-gray-100 hover:text-blue-600"
+                        href="#"> Sign in </a>
+                        <a class="px-4 py-2 inline-block text-white bg-blue-600 shadow-sm border border-transparent rounded-md hover:bg-blue-700"
+                        href="#"> Create account </a>
+                        </div>
+                        </div>
+                        </article> card.//
+                    article.border.border-gray-200.bg-white.shadow-sm.rounded.p-4.mb-5(class='lg:p-6')
+                        h2.text-xl.font-semibold.mb-5 Guest checkout
+                        .grid.grid-cols-2.gap-x-3
+                            .mb-4
+                                label.block.mb-1  First name 
+                                input.appearance-none.border.border-gray-200.bg-gray-100.rounded-md.py-2.px-3.w-full(class='hover:border-gray-400 focus:outline-none focus:border-gray-400' type='text' placeholder='Type here')
+                            .mb-4
+                                label.block.mb-1  Last name 
+                                input.appearance-none.border.border-gray-200.bg-gray-100.rounded-md.py-2.px-3.w-full(class='hover:border-gray-400 focus:outline-none focus:border-gray-400' type='text' placeholder='Type here')
+                        .grid.gap-x-3(class='lg:grid-cols-2')
+                            .mb-4
+                                label.block.mb-1  Phone 
+                                .flex.w-full
+                                    input.appearance-none.w-24.border.border-gray-200.bg-gray-100.rounded-tl-md.rounded-bl-md.py-2.px-3(class='hover:border-gray-400 focus:outline-none focus:border-gray-400' type='text' placeholder='Code' value='+998')
+                                    input.appearance-none.flex-1.border.border-gray-200.bg-gray-100.rounded-tr-md.rounded-br-md.py-2.px-3(class='hover:border-gray-400 focus:outline-none focus:border-gray-400' type='text' placeholder='Type phone')
+                            .mb-4
+                                label.block.mb-1  Email 
+                                input.appearance-none.border.border-gray-200.bg-gray-100.rounded-md.py-2.px-3.w-full(class='hover:border-gray-400 focus:outline-none focus:border-gray-400' type='email' placeholder='Type here')
+                        label.flex.items-center.w-max.my-4
+                            input.h-4.w-4(checked='' name='' type='checkbox')
+                            span.ml-2.inline-block.text-gray-500  I agree with Terms and Conditions 
+                        hr.my-4
+                        h2.text-xl.font-semibold.mb-5 Shipping information
+                        // radio selection
+                        .grid.gap-3.mb-6(class='sm:grid-cols-3')
+                            label.flex.p-3.border.border-gray-200.rounded-md.bg-gray-50.cursor-pointer(class='hover:border-blue-400 hover:bg-blue-50')
+                                span
+                                    input.h-4.w-4.mt-1(name='shipping' type='radio')
+                                p.ml-2
+                                    span Express delivery
+                                    small.block.text-sm.text-gray-400 3-4 days via Fedex
+                            label.flex.p-3.border.border-gray-200.rounded-md.bg-gray-50.cursor-pointer(class='hover:border-blue-400 hover:bg-blue-50')
+                                span
+                                    input.h-4.w-4.mt-1(name='shipping' type='radio')
+                                p.ml-2
+                                    span Post office
+                                    small.block.text-sm.text-gray-400 20-30 days via post
+                            label.flex.p-3.border.border-gray-200.rounded-md.bg-gray-50.cursor-pointer(class='hover:border-blue-400 hover:bg-blue-50')
+                                span
+                                    input.h-4.w-4.mt-1(name='shipping' type='radio')
+                                p.ml-2
+                                    span Self pick-up
+                                    small.block.text-sm.text-gray-400 Nearest location
+                        // radio selection .//end
+                        .grid.gap-x-3(class='md:grid-cols-3')
+                            .mb-4(class='md:col-span-2')
+                                label.block.mb-1  Address* 
+                                input.appearance-none.border.border-gray-200.bg-gray-100.rounded-md.py-2.px-3.w-full(class='hover:border-gray-400 focus:outline-none focus:border-gray-400' type='text' placeholder='Type here')
+                            .mb-4(class='md:col-span-1')
+                                label.block.mb-1  City* 
+                                .relative
+                                    select.block.appearance-none.border.border-gray-200.bg-gray-100.rounded-md.py-2.px-3.w-full(class='hover:border-gray-400 focus:outline-none focus:border-gray-400')
+                                        option Select here
+                                        option Second option
+                                        option Third option
+                                    i.absolute.inset-y-0.right-0.p-2.text-gray-400
+                                        svg.fill-current(width='22' height='22' viewbox='0 0 20 20')
+                                            path(d='M7 10l5 5 5-5H7z')
+                        .grid.gap-x-3(class='md:grid-cols-3')
+                            .mb-4(class='md:col-span-1')
+                                label.block.mb-1  House 
+                                input.appearance-none.border.border-gray-200.bg-gray-100.rounded-md.py-2.px-3.w-full(class='hover:border-gray-400 focus:outline-none focus:border-gray-400' type='text' placeholder='Type here')
+                            .mb-4(class='md:col-span-1')
+                                label.block.mb-1  Building 
+                                input.appearance-none.border.border-gray-200.bg-gray-100.rounded-md.py-2.px-3.w-full(class='hover:border-gray-400 focus:outline-none focus:border-gray-400' type='text' placeholder='Type here')
+                            .mb-4(class='md:col-span-1')
+                                label.block.mb-1  ZIP code 
+                                input.appearance-none.border.border-gray-200.bg-gray-100.rounded-md.py-2.px-3.w-full(class='hover:border-gray-400 focus:outline-none focus:border-gray-400' type='text' placeholder='Type here')
+                        .mb-4
+                            label.block.mb-1  Other info 
+                            textarea.appearance-none.border.border-gray-200.bg-gray-100.rounded-md.py-2.px-3.w-full(placeholder='Type your wishes' class='hover:border-gray-400 focus:outline-none focus:border-gray-400')
+                        label.flex.items-center.w-max.my-4
+                            input.h-4.w-4(checked='' name='' type='checkbox')
+                            span.ml-2.inline-block.text-gray-500
+                                | Save my information for future purchase
+                        .flex.justify-end.space-x-2
+                            a.px-5.py-2.inline-block.text-gray-700.bg-white.shadow-sm.border.border-gray-200.rounded-md(class='hover:bg-gray-100 hover:text-blue-600' href='#')  Back 
+                            a.px-5.py-2.inline-block.text-white.bg-green-600.border.border-transparent.rounded-md(class='hover:bg-green-700' href='#')  Continue 
+                    // card.//
+                aside(class='md:w-1/3')
+                    article.text-gray-600(style='max-width: 350px')
+                        h2.text-lg.font-semibold.mb-3 Summary
+                        ul
+                            li.flex.justify-between.mb-1
+                                span Total price:
+                                span 
+                            li.flex.justify-between.mb-1
+                                span Discount:
+                                span.text-green-500 
+                            li.flex.justify-between.mb-1
+                                span TAX:
+                                span 
+                            li.border-t.flex.justify-between.mt-3.pt-3
+                                span Total price:
+                                span.text-gray-900.font-bold 
+                        hr.my-4
+                        .flex.gap-3
+                            input.appearance-none.border.border-gray-200.bg-gray-100.rounded-md.py-2.px-3.w-full(class='hover:border-gray-400 focus:outline-none focus:border-gray-400' type='text' placeholder='Coupon code')
+                            button.px-4.py-2.inline-block.text-gray-700.bg-white.shadow-sm.border.border-gray-200.rounded-md(type='button' class='hover:bg-gray-100 hover:text-blue-600')
+                                | Apply
+                        hr.my-4
+                        h2.text-lg.font-semibold.mb-3 Items in cart
+                        //- figure.flex.items-center.mb-4.leading-5
+                        //-     div
+                        //-         .block.relative.w-20.h-20.rounded.p-1.border.border-gray-200
+                        //-             img(width='70' height='70' src='images/items/1.jpg' alt='Title')
+                        //-             span.absolute.-top-2.-right-2.w-6.h-6.text-sm.text-center.flex.items-center.justify-center.text-white.bg-gray-400.rounded-full
+                        //-                 | 1
+                        //-     figcaption.ml-3
+                        //-         p
+                        //-             | GoPRO Action Camera 
+                        //-             br
+                        //-             |  Model: G-200
+                        //-         p.mt-1.text-gray-400  Total: $12.99 
+                        //- figure.flex.items-center.mb-4.leading-5
+                        //-     div
+                        //-         .block.relative.w-20.h-20.rounded.p-1.border.border-gray-200
+                        //-             img(width='70' height='70' src='images/items/2.jpg' alt='Title')
+                        //-             span.absolute.-top-2.-right-2.w-6.h-6.text-sm.text-center.flex.items-center.justify-center.text-white.bg-gray-400.rounded-full
+                        //-                 | 2
+                        //-     figcaption.ml-3
+                        //-         p  Modern Product Name Here 
+                        //-         p.mt-1.text-gray-400  Total: $12.99 
+                        //- figure.flex.items-center.mb-4.leading-5
+                        //-     div
+                        //-         .block.relative.w-20.h-20.rounded.p-1.border.border-gray-200
+                        //-             img(width='70' height='70' src='images/items/8.jpg' alt='Title')
+                        //-             span.absolute.-top-2.-right-2.w-6.h-6.text-sm.text-center.flex.items-center.justify-center.text-white.bg-gray-400.rounded-full
+                        //-                 | 5
+                        //-     figcaption.ml-3
+                        //-         p
+                        //-             | Another Best Product 
+                        //-             br
+                        //-             |  Name Goes Here
+                        //-         p.mt-1.text-gray-400  Total: $12.99 
+                // col.//
+                // grid.//
+                // container.//

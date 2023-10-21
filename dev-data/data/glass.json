@@ -1,0 +1,68 @@
+[{
+        "_id": "5c88fa8cf4afda39709c2955",
+        "name": "John Jacobs Computer Glasses",
+        "price": 1299,
+        "description": "Silver Full Rim Aviator Eyeglasses",
+        "rating": 4.2,
+        "summary": "Size: Wide.Zero Power",
+        "imageCover": "computer glasses.jpg",
+        "imageHover": "glass-1-hover.jpg",
+        "images": ["computer glasses.jpg", "glass-1-hover.jpg", "glass1-img1.jpg", "glass1-img2.jpg", "glass1-img3.jpg"]
+
+    },
+    {
+        "_id": "5c88fa8cf4afda39709c295a",
+        "name": "Black Brown Full Rim Aviator Eyeglasses",
+        "price": 1599,
+        "description": "lorem",
+        "rating": 4.2,
+        "summary": "Size: Wide",
+        "imageCover": "glass2-cover.jpg",
+        "imageHover": "glass2-hover.jpg",
+        "images": ["glass2-cover.jpg", "glass2-hover.jpg", "2glass2-img1.jpg", "glass1-img2.jpg", "3glass2-img1.jpg"]
+    },
+    {
+        "_id": "5c88fa8cf4afda39709c295d",
+        "name": "Blue Transparent Full Rim Aviator Eyeglasses",
+        "price": 1299,
+        "description": "lorem",
+        "rating": 4.2,
+        "summary": "Size: Wide",
+        "imageCover": "glass3-cover.jpg",
+        "imageHover": "glass3-hover.jpg",
+        "images": ["glass3-cover.jpg", "glass3-hover.jpg", "1glass3.jpg", "2glass3.jpg", "3glass3.jpg"]
+    },
+    {
+        "_id": "5c88fa8cf4afda39709c296c",
+        "name": "Hooper",
+        "price": 2700,
+        "description": "Transparent Full Rim Round Eyeglasses",
+        "rating": 4.2,
+        "summary": "Size: 8-12 years",
+        "imageCover": "glass4-cover.jpg",
+        "imageHover": "glass4-hover.jpg",
+        "images": ["glass4-cover.jpg", "glass4-hover.jpg", "1glass4.jpg", "2glass4.jpg", "3glass4.jpg"]
+    },
+    {
+        "_id": "5c88fa8cf4afda39709c2974",
+        "name": "Vincent Chase Polarized",
+        "price": 1199,
+        "description": "Black Full Rim Aviator Sunglasses",
+        "rating": 4.2,
+        "summary": "Size: Medium",
+        "imageCover": "glass5-cover.jpg",
+        "imageHover": "glass5-hover.jpg",
+        "images": ["glass5-cover.jpg", "glass5-hover.jpg", "1glass5.jpg", "2glass5.jpg", "3glass5.jpg"]
+    },
+    {
+        "_id": "5c88fa8cf4afda39709c2970",
+        "name": "Lenskart Air",
+        "price": 1700,
+        "description": "Black Rimless Square Eyeglasses",
+        "rating": 4.2,
+        "summary": "Size: Medium",
+        "imageCover": "glass6-cover.jpg",
+        "imageHover": "glass6-hover.jpg",
+        "images": ["glass6-cover.jpg", "glass6-hover.jpg", "1glass6.jpg", "2glass6.jpg", "3glass6.jpg"]
+    }
+]
